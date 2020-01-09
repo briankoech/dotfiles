@@ -10,6 +10,8 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
+"Asynchronous linting engine
+Plugin 'w0rp/ale'
 " plugin on GitHub repo
 Plugin 'tpope/vim-fugitive'
 
@@ -49,6 +51,9 @@ Plugin 'digitaltoad/vim-pug'
 Plugin 'wincent/command-t'
 "Automatically save changes to disk
 Plugin '907th/vim-auto-save'
+
+" seti plugin for 
+Plugin 'trusktr/seti.vim'
 
 " Wakatime plugin
 Plugin 'wakatime/vim-wakatime'
@@ -157,3 +162,7 @@ let NERDTreeShowHidden=1 " show hidden files by default
 let g:auto_save = 1  " enable AutoSave on Vim startup
 let g:auto_save_events = ["InsertLeave", "TextChanged"]
 let g:auto_save_write_all_buffers = 1
+
+" ale settings
+" Enable completion where available.
+let g:ale_completion_enabled = 1
