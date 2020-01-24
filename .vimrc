@@ -18,12 +18,18 @@ Plugin 'tpope/vim-fugitive'
 " plugin from http://vim-scripts.org/vim/scripts.html
 Plugin 'L9'
 
+" quoting and parenthesizing made simple
+Plugin 'tpope/vim-surround'
+
+Plugin 'wincent/terminus'
 " Easily browse files and folder structure
 Plugin 'scrooloose/nerdtree'
 
 " Autocomplete plugin - code completion as you type
 Plugin 'valloric/youcompleteme'
 
+" insert or delete brackets, parens, quotes in pair
+Plugin 'jiangmiao/auto-pairs'
 " Lean and mean status/tabline for vim that's light as air
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -37,6 +43,8 @@ Plugin 'scrooloose/syntastic'
 " Vim motions on speed
 Plugin 'easymotion/vim-easymotion'
 
+" typescript
+Plugin 'leafgarland/typescript-vim'
 " Javascript plugins
 Plugin 'pangloss/vim-javascript'
 " beautify javascript
@@ -108,6 +116,8 @@ let g:mapleader=','
 " Autoformat current file$
 map <F7> mzgg=G`z`
 nnoremap <leader>f mkgg=G'k
+" make jj do esc
+inoremap jj <Esc>
 " =============================================
 " Indicate 80 chars mark
 set colorcolumn=80
@@ -129,7 +139,7 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-set number
+set relativenumber
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
@@ -166,3 +176,6 @@ let g:auto_save_write_all_buffers = 1
 " ale settings
 " Enable completion where available.
 let g:ale_completion_enabled = 1
+
+:autocmd InsertEnter,InsertLeave * set cul!
+
