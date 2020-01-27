@@ -43,6 +43,9 @@ Plugin 'scrooloose/syntastic'
 " Vim motions on speed
 Plugin 'easymotion/vim-easymotion'
 
+" display indentation levels with thin vertical lines
+Plugin 'yggdroot/indentLine'
+
 " typescript
 Plugin 'leafgarland/typescript-vim'
 " Javascript plugins
@@ -128,7 +131,7 @@ set hlsearch
 set mouse=a
 syntax enable
 " let g:molokai_original = 1
-colorscheme seti 
+colorscheme gruvbox "seti 
 set foldmethod=syntax
 set foldlevelstart=1
 " set nofoldenable
@@ -169,7 +172,7 @@ let g:multi_cursor_start_key='<C-n>'
 let g:multi_cursor_start_word_key='g<C-n>'
 let NERDTreeShowHidden=1 " show hidden files by default
 " ================ Vim autosave ===============
-let g:auto_save = 1  " enable AutoSave on Vim startup
+let g:auto_save = 0  " enable AutoSave on Vim startup
 let g:auto_save_events = ["InsertLeave", "TextChanged"]
 let g:auto_save_write_all_buffers = 1
 
