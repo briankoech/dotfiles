@@ -19,11 +19,13 @@ Plug 'preservim/nerdtree'
 
 Plug 'ryanoasis/vim-devicons' " Developer Icons
 Plug 'terryma/vim-multiple-cursors' " CTRL + N for multiple cursors
+
 " color schemes
-" Plug 'rafi/awesome-vim-colorschemes' " Retro Scheme
 Plug 'morhetz/gruvbox'
-Plug 'lifepillar/vim-gruvbox8'
 Plug 'sainnhe/gruvbox-material'
+Plug 'sainnhe/everforest'
+Plug 'sainnhe/edge'
+Plug 'sainnhe/sonokai'
 
 " tpope
 Plug 'tpope/vim-surround' " Surrounding ysw)
