@@ -3,6 +3,7 @@
 " set packpath+=~/.vim
 " source ~/.vimrc
 
+" let $PATH = "C:\Program Files\Git\bin;" . $PATH
 set number
 set relativenumber
 set autoindent
@@ -11,6 +12,8 @@ set shiftwidth=2
 set smarttab
 set softtabstop=2
 set mouse=a
+
+set autoread
 
 call plug#begin()
 
@@ -26,6 +29,8 @@ Plug 'sainnhe/gruvbox-material'
 Plug 'sainnhe/everforest'
 Plug 'sainnhe/edge'
 Plug 'sainnhe/sonokai'
+Plug 'rebelot/kanagawa.nvim'
+Plug 'tomasiser/vim-code-dark'
 
 " tpope
 Plug 'tpope/vim-surround' " Surrounding ysw)
@@ -47,11 +52,12 @@ Plug 'antoinemadec/coc-fzf'
 " search in files
 Plug 'dyng/ctrlsf.vim'
 
-" colorscheme
-Plug 'rebelot/kanagawa.nvim'
-Plug 'tomasiser/vim-code-dark'
-
 Plug 'lukas-reineke/indent-blankline.nvim'
+Plug 'mattn/emmet-vim'
+
+" syntax highlighting
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/playground'
 
 call plug#end()
 
@@ -81,11 +87,20 @@ let g:gruvbox_material_background = 'medium'
 " For better performance
 let g:gruvbox_material_better_performance = 1
 let g:gruvbox_material_disable_italic_comment = 1
-let g:airline_theme = 'gruvbox_material'
 
+" ========= everforest config ========
+let g:everforest_background = 'soft'
+" For better performance
+let g:everforest_better_performance = 1
+
+" ========== sonokai config ==========================
+let g:sonokai_style = 'andromeda'
+let g:sonokai_better_performance = 1
+
+
+let g:airline_theme = 'gruvbox_material'
 colorscheme gruvbox-material
 
-" ====================================
 " set fzf window size
 let g:fzf_layout = { 'down': 15 }
 
@@ -100,4 +115,8 @@ set softtabstop =2
 set shiftwidth  =2
 set expandtab
 
-source ~/AppData/Local/nvim/plug-config/coc.vim
+" ========== Indent line configs ============
+let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+" let g:indent_blankline_space_char_blankline = '.'
+
+" source ~/AppData/Local/nvim/plug-config/coc.vim
