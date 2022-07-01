@@ -17,7 +17,8 @@ local sources = {
 null_ls.setup {
   debug = true,
   sources = {
-    formatting.prettier.with { extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" } },
+    formatting.prettier.with { extra_args = { "--single-quote", "--jsx-single-quote" } },
+    formatting.stylua
   }
 }
     -- formatting.black.with { extra_args = { "--fast" } },

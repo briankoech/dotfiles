@@ -46,8 +46,8 @@ keymap("v", "<A-k>", ":m .-2<CR>==", opts)
 keymap("v", "p", '"_dP', opts)
 
 -- open NERDTree
-keymap("n", "<C-a>", ":NERDTreeToggle<CR>", opts)
-keymap("n", "<leader>r", ":NERDTreeFind<cr>", opts)
+keymap("n", "<C-a>", ":NvimTreeToggle<CR>", opts)
+keymap("n", "<leader>r", ":NvimTreeFindFile<cr>", opts)
 
 -- fzf to ctrl p
 keymap("n", "<C-P>", ":GFiles<CR>", opts)

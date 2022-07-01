@@ -9,7 +9,7 @@ return require('packer').startup(function()
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
 
   -- use 'vim-airline/vim-airline'
-  use 'preservim/nerdtree'
+  --  use 'preservim/nerdtree'
 
   use 'ryanoasis/vim-devicons' -- Developer Icons
   use 'terryma/vim-multiple-cursors' -- CTRL + N for multiple cursors
@@ -82,4 +82,13 @@ return require('packer').startup(function()
   use 'jose-elias-alvarez/null-ls.nvim'
 
   use 'wakatime/vim-wakatime'
+
+  -- tree
+  use {
+    'kyazdani42/nvim-tree.lua',
+    requires = {
+      'kyazdani42/nvim-web-devicons', -- optional, for file icons
+    },
+    tag = 'nightly' -- optional, updated every week. (see issue #1193)
+  }
 end)
