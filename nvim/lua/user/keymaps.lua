@@ -50,7 +50,10 @@ keymap("n", "<C-a>", ":NvimTreeToggle<CR>", opts)
 keymap("n", "<leader>r", ":NvimTreeFindFile<cr>", opts)
 
 -- fzf to ctrl p
-keymap("n", "<C-P>", ":GFiles<CR>", opts)
+-- keymap("n", "<C-P>", ":GFiles<CR>", opts)
+
+-- telescope tcope find_files ctrl p
+keymap("n", "<C-p>", ":Telescope find_files<CR>" , opts)
 
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)
