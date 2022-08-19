@@ -54,6 +54,7 @@ keymap("n", "<leader>r", ":NvimTreeFindFile<cr>", opts)
 
 -- telescope tcope find_files ctrl p
 keymap("n", "<C-p>", ":Telescope find_files<CR>" , opts)
+keymap("n", "<leader>F", ":Telescope live_grep<CR>" , opts)
 
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)

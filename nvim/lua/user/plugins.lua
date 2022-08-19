@@ -49,12 +49,13 @@ return require("packer").startup(function(use)
 	use("junegunn/fzf.vim")
 	use("antoinemadec/coc-fzf")
 
-  -- 
-  -- Telescope
-  use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.0',
-    requires = { {'nvim-lua/plenary.nvim'} }
-  }
+	--
+	-- Telescope
+	use({
+		"nvim-telescope/telescope.nvim",
+		tag = "0.1.0",
+		requires = { { "nvim-lua/plenary.nvim" } },
+	})
 
 	-- search in files
 	use("dyng/ctrlsf.vim")
@@ -104,4 +105,8 @@ return require("packer").startup(function(use)
 		},
 		tag = "nightly", -- optional, updated every week. (see issue #1193)
 	})
+
+	-- Is using a standard Neovim install, i.e. built from source or using a
+	-- provided appimage.
+	use("lewis6991/impatient.nvim")
 end)
