@@ -17,6 +17,9 @@ vim.g.maplocalleader = ","
 --  term_mode = "t"
 --  command_mode = "c"
 
+-- INSERT ---
+keymap("i", "jj", "<Esc>", opts)
+
 
 -- NORMAL --
 --- Better window navigation
@@ -45,7 +48,7 @@ keymap("v", "<A-j>", ":m .+1<CR>==", opts)
 keymap("v", "<A-k>", ":m .-2<CR>==", opts)
 keymap("v", "p", '"_dP', opts)
 
--- open NERDTree
+-- open Tree
 keymap("n", "<C-a>", ":NvimTreeToggle<CR>", opts)
 keymap("n", "<leader>r", ":NvimTreeFindFile<cr>", opts)
 
