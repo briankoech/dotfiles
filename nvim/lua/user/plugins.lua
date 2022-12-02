@@ -127,4 +127,8 @@ return require("packer").startup(function(use)
 	-- Is using a standard Neovim install, i.e. built from source or using a
 	-- provided appimage.
 	use("lewis6991/impatient.nvim")
+
+  -- omnisharp
+  use('OmniSharp/omnisharp-vim')
+  use('nickspoons/vim-sharpenup')
 end)
