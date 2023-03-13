@@ -3,6 +3,8 @@ $NvimPath = 'nvim\'
 $InstallPath = Join-Path -Path $Env:LOCALAPPDATA -ChildPath $NvimPath
 $TargetPath = Join-Path -Path $CurrentLocation -ChildPath $NvimPath
 
+echo $InstallPath
+echo $TargetPath
 function Install-NvimConfig() {
   $error.clear()
 try
@@ -26,7 +28,7 @@ function Set-Prettier() {
   echo $link
 }
 
-# Install-NvimConfig;
+Install-NvimConfig;
 #
 Set-Prettier;
 

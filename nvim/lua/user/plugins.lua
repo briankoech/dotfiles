@@ -98,8 +98,11 @@ return require("packer").startup(function(use)
 	use("rafamadriz/friendly-snippets") -- a bunch of snippets to use
 
 	-- LSP
-	use("neovim/nvim-lspconfig") -- enable LSP
-	use("williamboman/nvim-lsp-installer") -- simple to use language server installer
+  use {
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+    "neovim/nvim-lspconfig",
+  }
 
 	-- git
 	use("lewis6991/gitsigns.nvim")
@@ -131,4 +134,18 @@ return require("packer").startup(function(use)
   -- omnisharp
   use('OmniSharp/omnisharp-vim')
   use('nickspoons/vim-sharpenup')
+
+  use('eandrju/cellular-automaton.nvim') 
+
+  -- Lua
+  use {
+  "folke/zen-mode.nvim",
+    config = function()
+      require("zen-mode").setup {
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+    }
+   end
+  }
 end)

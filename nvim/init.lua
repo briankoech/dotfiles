@@ -4,6 +4,7 @@ require('user.keymaps')
 require('user.options')
 require('user.colorscheme')
 require('user.cmp');
+require('user.mason')
 require('user.lsp')
 require('user.autopairs')
 require('user.gitsigns')

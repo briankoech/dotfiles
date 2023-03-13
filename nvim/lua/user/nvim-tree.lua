@@ -31,9 +31,7 @@ nvimtree.setup({
 	view = {
 		adaptive_size = true,
 		width = 30,
-		height = 30,
 		hide_root_folder = false,
-	  -- auto_resize = true,
 		side = "left",
 		mappings = {
 			list = {
@@ -43,7 +41,5 @@ nvimtree.setup({
 				{ key = "v", cb = tree_cb("vsplit") },
 			},
 		},
-	},
-	--git_hl = 1,
-	auto_close = true,
+	}
 })

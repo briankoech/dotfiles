@@ -63,3 +63,4 @@ keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
 keymap("n", "<leader>f", ":Format<CR>", opts)
+
